@@ -1,0 +1,33 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+sourceW_fvOPT
+{
+    type            scalarSemiImplicitSource;	
+    active          true;
+    timeStart       2;
+    duration        10;
+    selectionMode   cellSet; 	//OPTIONS: 'all', 'cellSet', 'cellZone', 'points'
+    cellSet         cubeW;
+    fields 	    (W0,W1,W2,W3,W4,W5,W6,W7,W8,W9);
+    volumeMode      absolute;	//OPTIONS: 'absolute' (scalar units, e.g. [kg]), 'specific' (salar units, e.g. [kg/m3])
+    injectionRateSuSp 
+     {
+	 W0 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W1 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W2 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W3 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W4 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W6 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W7 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W8 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+	 W9 (8.43e-4 0);//two coefficients needed (<scalarValue> <0>)
+     }
+}
+
+// ************************************************************************* //
